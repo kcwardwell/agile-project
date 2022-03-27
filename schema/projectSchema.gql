@@ -1,0 +1,22 @@
+type Project {
+    name: String!
+}
+
+type Task {
+    name: String!
+    project: Project @relation
+    decription: String!
+    dueDate: String!
+    priority: String!
+    startDate: String
+    completionDate: String
+
+}
+
+type taskProgress {
+    task: Task @relation
+    progress: Int
+    dateWorked: String
+    status: String
+}
+
